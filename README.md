@@ -3,14 +3,15 @@
 This repository contains implementation of some of the famous classical ciphers in C.
 
 Currently implemented ciphers include:
--  Affine cipher
+- Affine cipher
 - Feistel network
 - Playfair cipher
 - 16 rounds Feistel based block cipher
+- AES 128
 
 ## Playfair Cipher
 **General rules of the Playfair cipher are as follows:**
-1. Repeating plaintext letters that are in the same pair are separated with a filler letter, such as x.
+1. Repeating plaintext letters that are in the same pair are separated with a filler letter, such as `x`.
 2. Two plaintext letters that fall in the same row of the matrix are each replaced by the letter to the right, with the first element of the row circularly following the last.
 3. Two plaintext letters that fall in the same column are each replaced by the letter beneath, with the top element of the column circularly following the last.
 4. Otherwise, each plaintext letter in a pair is replaced by the letter that lies in its own row and the column occupied by the other plaintext letter.
@@ -60,3 +61,6 @@ $
 0xe1, 0xf8, 0x98, 0x11, 0x69, 0xd9, 0x8e, 0x94, 0x9b, 0x1e, 0x87, 0xe9, 0xce, 0x55, 0x28, 0xdf,\\
 0x8c, 0xa1, 0x89, 0x0d, 0xbf, 0xe6, 0x42, 0x68, 0x41, 0x99, 0x2d, 0x0f, 0xb0, 0x54, 0xbb, 0x16\}
 $
+
+## AES 128
+This implementation performs both encryption and decryption on 16 bytes of message in hexadecimal using the standard AES 128 structure.
